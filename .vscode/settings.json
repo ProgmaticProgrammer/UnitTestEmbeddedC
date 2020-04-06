@@ -23,6 +23,7 @@
         ]
     },
     "gtest-adapter.debugConfig": [
-        "cl.exe build and debug active file"
-    ]
+        "Debug"
+    ],
+    "gtest-adapter.supportLocation": true
 }
