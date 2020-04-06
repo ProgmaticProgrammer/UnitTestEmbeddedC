@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 # set the project name
 project(UnitTestEmbeddedC VERSION 1.0)
+add_subdirectory(googletest)
 
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 11)
@@ -15,8 +16,9 @@ set(GTEST_INC_DIR "./googletest/googletest/include")
 list(APPEND EXTRA_INCLUDES ${GMOCK_INC_DIR})                   
 list(APPEND EXTRA_INCLUDES ${GTEST_INC_DIR})
 
-add_subdirectory(googletest)
-add_executable(UnitTestEmbeddedC src/main.cpp)
+file(GLOB SOURCES "src/main.cpp" "src/UnitTestFiles/*.cpp" "src/MockFiles/*.cpp" "src/CFiles/*.c")
+
+add_executable(UnitTestEmbeddedC ${SOURCES})
 set_property(TARGET UnitTestEmbeddedC PROPERTY
   MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
   
@@ -29,6 +31,9 @@ add_dependencies(UnitTestEmbeddedC gtest gmock)
 
 target_include_directories(UnitTestEmbeddedC PUBLIC
                            ./src
+                           ./src/UnitTestFiles
+                           ./src/MockFiles
+                           ./src/CFiles
                            ${EXTRA_INCLUDES}
                            )
 					   
