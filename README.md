@@ -1,4 +1,5 @@
 # UnitTestForEmbeddedC
+![Alt text](/doc/screenshot.jpg?raw=true "Optional Title")
 Template for GTest/Mock with Embedded C
 
 Project recompile with VS2017 community.
