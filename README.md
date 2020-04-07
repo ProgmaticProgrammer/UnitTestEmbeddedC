@@ -7,7 +7,7 @@ This is an example of doing a UnitTest project using [googltest](https://github.
 
 | Build status          | Systems / Compilers         |
 | ------------- | ------------------------------------------ |
-| [![Visual Studio Builds](https://ci.appveyor.com/api/projects/status/t6i95u07gw1gqhql/branch/master?svg=true)](https://https://ci.appveyor.com/project/ProgmaticProgrammer/unittestembeddedc/branch/master)       | Windows (Visual Studio 2017 |
+| [![Visual Studio Builds](https://ci.appveyor.com/api/projects/status/t6i95u07gw1gqhql/branch/master?svg=true)](https://ci.appveyor.com/project/ProgmaticProgrammer/unittestembeddedc/branch/master)       | Windows (Visual Studio 2017) |
 
 
 ![Alt text](/doc/screenshot.jpg?raw=true "Optional Title")
