@@ -1,4 +1,6 @@
-call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat"
+#call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat"
+# version string format -- This will be overwritten later anyway
+version: "{build}"
 
 os:
   - Visual Studio 2017
@@ -22,14 +24,14 @@ configuration:
 
 #Cmake will autodetect the compiler, but we set the arch
 before_build:
-  - cmake -H. -Bbuild -A%PLATFORM%
+  - cmake -H. -BBuild -A%PLATFORM%
 
 # build with MSBuild
 build:
-  project: build\UnitTestEmbeddedC.sln  # path to Visual Studio solution or project
+  project: Build\UnitTestEmbeddedC.sln  # path to Visual Studio solution or project
   parallel: true                        # enable MSBuild parallel builds
   verbosity: normal                     # MSBuild verbosity level {quiet|minimal|normal|detailed}
 
 test_script:
-  - cd build
-  - ctest -V -C %CONFIGURATION%
+  - cd Build
+  - ctest -V -j 2 -C %CONFIGURATION%
