@@ -85,7 +85,7 @@ Directory structure:
 
    ![Alt text](/doc/debug.jpg?raw=true "Optional Title")
    
-#### If GoogleTest Adapter is installer, unittests can be viewed in a tree graph as well
+#### If GoogleTest Adapter is installed, unittests can be viewed in a tree graph as well
 
    ![Alt text](/doc/screenshot.jpg?raw=true "Optional Title")
 
@@ -93,8 +93,10 @@ Directory structure:
 
  - Integrate with Circleci
  - Make it running under GNU/Linux
+ 
+## References
+- https://cognitivewaves.wordpress.com/cmake-and-visual-studio/#visual-studio-to-cmake-mapping
 
 ## License
-----
 
 MIT
