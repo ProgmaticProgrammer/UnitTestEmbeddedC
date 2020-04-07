@@ -3,7 +3,7 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "cmake configure",
+      "label": "cmake configure (VS2017)",
       "command": "cmake . -Bbuild -G \"Visual Studio 15 2017\" -T v141",
       "group": {
         "kind": "build",
@@ -23,8 +23,18 @@
     },
     {
       "type": "shell",
-      "label": "ctest run",
+      "label": "ctest run (Windows)",
       "command": "ctest --build-and-test . build --build-generator \"Visual Studio 15 2017\" --test-command UnitTestEmbeddedC",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": ["$msCompile"]
+    },
+    {
+      "type": "shell",
+      "label": "ctest run (Unix/Linux)",
+      "command": "ctest --build-and-test . build --build-generator \"Unix Makefiles\" --test-command UnitTestEmbeddedC",
       "group": {
         "kind": "test",
         "isDefault": true

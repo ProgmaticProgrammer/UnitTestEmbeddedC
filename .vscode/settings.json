@@ -27,7 +27,6 @@
     ],
     "gtest-adapter.supportLocation": true,
     "files.associations": {
-        "*.html": "html",
         "stdexcept": "cpp"
     }
 }

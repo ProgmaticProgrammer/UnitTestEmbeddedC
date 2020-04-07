@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.13)
 
 # set the project name
 project(UnitTestEmbeddedC VERSION 1.0)
@@ -14,6 +14,7 @@ set(GTEST_INC_DIR "./googletest/googletest/include")
 list(APPEND EXTRA_INCLUDES ${GMOCK_INC_DIR})                   
 list(APPEND EXTRA_INCLUDES ${GTEST_INC_DIR})
 
+#set( gtest_disable_pthreads ON )
 set( gtest_force_shared_crt ON CACHE BOOL "Always use msvcrt.dll" FORCE)
 add_subdirectory(googletest)
 
