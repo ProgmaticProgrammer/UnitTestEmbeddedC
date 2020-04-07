@@ -31,5 +31,5 @@ build:
   verbosity: normal                     # MSBuild verbosity level {quiet|minimal|normal|detailed}
 
 test_script:
-  - cd build
+#  - cd build
   - ctest -V -C %CONFIGURATION%
