@@ -41,4 +41,4 @@ target_include_directories(UnitTestEmbeddedC PUBLIC
 enable_testing()
 
 # does the application run
-add_test(NAME Runs COMMAND UnitTestEmbeddedC WORKING_DIRECTORY ./build)
+add_test(NAME Runs COMMAND UnitTestEmbeddedC)
