@@ -3,7 +3,8 @@
 #include "ServicesMocks.h"
 #include "ModuleMock.h"
 
-namespace EmbeddedCUnitTest {
+namespace EmbeddedCUnitTest
+{
 
 class TestFixture : public ::testing::Test
 {
@@ -22,14 +23,14 @@ public:
 		_modulesMocks.reset();
 	}
 
-	template<typename T>
-	static T& GetMock()
+	template <typename T>
+	static T &GetMock()
 	{
-		auto ptr = dynamic_cast<T*>(_modulesMocks.get());
+		auto ptr = dynamic_cast<T *>(_modulesMocks.get());
 		if (ptr == nullptr)
 		{
 			auto errMsg = "The test does not provide mock of \"" + std::string(typeid(T).name()) + "\"";
-			throw std::exception(errMsg.c_str());
+			throw std::runtime_error(errMsg.c_str());
 		}
 		return *ptr;
 	}
@@ -42,4 +43,4 @@ public:
 	static std::unique_ptr<BaseModuleMock> _modulesMocks;
 };
 
-}
+} // namespace EmbeddedCUnitTest

@@ -17,7 +17,7 @@ list(APPEND EXTRA_INCLUDES ${GTEST_INC_DIR})
 set( gtest_force_shared_crt ON CACHE BOOL "Always use msvcrt.dll" FORCE)
 add_subdirectory(googletest)
 
-file(GLOB SOURCES "test/main.cpp" "test/UnitTestFiles/*.cpp" "test/MockFiles/*.cpp" "src/CFiles/*.c")
+file(GLOB SOURCES "test/Main.cpp" "test/UnitTestFiles/*.cpp" "test/MockFiles/*.cpp" "src/CFiles/*.c")
 add_executable(UnitTestEmbeddedC ${SOURCES})
 set_property(TARGET UnitTestEmbeddedC PROPERTY
   MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
@@ -25,7 +25,7 @@ set_property(TARGET UnitTestEmbeddedC PROPERTY
 list(APPEND EXTRA_LIBS ${PROJECT_BINARY_DIR}/lib)
 
 target_link_directories(UnitTestEmbeddedC PUBLIC ${EXTRA_LIBS} )	
-target_link_libraries(UnitTestEmbeddedC PUBLIC gtestd gmockd)
+target_link_libraries(UnitTestEmbeddedC PUBLIC gtest gmock)
 
 add_dependencies(UnitTestEmbeddedC gtest gmock)
 
