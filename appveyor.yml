@@ -1,4 +1,6 @@
 #call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat"
+# version string format -- This will be overwritten later anyway
+version: "{build}"
 
 os:
   - Visual Studio 2017
