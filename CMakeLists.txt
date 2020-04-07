@@ -31,9 +31,14 @@ add_dependencies(UnitTestEmbeddedC gtest gmock)
 
 target_include_directories(UnitTestEmbeddedC PUBLIC
                            ./src
-						   ./test
+                           ./test
                            ./test/UnitTestFiles
                            ./test/MockFiles
                            ${EXTRA_INCLUDES}
                            )
-					   
+
+                           
+enable_testing()
+
+# does the application run
+add_test(NAME Runs COMMAND UnitTestEmbeddedC WORKING_DIRECTORY ./build)

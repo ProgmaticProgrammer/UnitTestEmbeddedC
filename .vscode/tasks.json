@@ -2,28 +2,34 @@
   "version": "2.0.0",
   "tasks": [
     {
-        "type": "shell",
-        "label": "cmake configure",
-        "command": "cmake . -Bbuild",
-        "group": {
-            "kind": "build",
-            "isDefault": true
-        },
-        "problemMatcher": [
-            "$msCompile"
-        ]
+      "type": "shell",
+      "label": "cmake configure",
+      "command": "cmake . -Bbuild -G \"Visual Studio 15 2017\" -T v141",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$msCompile"]
     },
     {
-        "type": "shell",
-        "label": "cmake build",
-        "command": "cmake --build ./build",
-        "group": {
-            "kind": "build",
-            "isDefault": true
-        },
-        "problemMatcher": [
-            "$msCompile"
-        ]
+      "type": "shell",
+      "label": "cmake build",
+      "command": "cmake --build ./build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$msCompile"]
+    },
+    {
+      "type": "shell",
+      "label": "ctest run",
+      "command": "ctest --build-and-test . build --build-generator \"Visual Studio 15 2017\" --test-command UnitTestEmbeddedC",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": ["$msCompile"]
     }
-]
+  ]
 }
