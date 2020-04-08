@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.12)
 
 # set the project name
 project(UnitTestEmbeddedC VERSION 1.0)
@@ -25,7 +25,8 @@ set_property(TARGET UnitTestEmbeddedC PROPERTY
   
 list(APPEND EXTRA_LIBS ${PROJECT_BINARY_DIR}/lib)
 
-target_link_directories(UnitTestEmbeddedC PUBLIC ${EXTRA_LIBS} )	
+#target_link_directories(UnitTestEmbeddedC PUBLIC ${EXTRA_LIBS} )	
+set_target_properties(UnitTestEmbeddedC PROPERTIES LINK_FLAGS -L${EXTRA_LIBS})
 target_link_libraries(UnitTestEmbeddedC PUBLIC gtest gmock)
 
 add_dependencies(UnitTestEmbeddedC gtest gmock)
