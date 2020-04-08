@@ -3,11 +3,12 @@ This is an example of doing a UnitTest project using [googltest](https://github.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](/LICENSE)
 
-[<img src="https://travis-ci.com/images/logos/TravisCI-Full-Color.png" height="25"/><img src="https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/16896/ApwXsQaJT16xVdsGs7aY" height="25"/>](#references)
+[<img src="https://travis-ci.com/images/logos/TravisCI-Full-Color.png" height="25"/>
+<img src="https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/16896/ApwXsQaJT16xVdsGs7aY" height="25"/>](#references)
 
 | Build status          | Systems / Compilers         |
 | ------------- | ------------------------------------------ |
-| [![GCC / Linux Builds](https://travis-ci.com/ProgmaticProgrammer/UnitTestEmbeddedC.svg?branch=master)](https://ci.appveyor.com/project/ProgmaticProgrammer/unittestembeddedc/branch/master) | Linux (gcc7) |
+| [![Build Status](https://travis-ci.com/ProgmaticProgrammer/UnitTestEmbeddedC.svg?branch=master)](https://travis-ci.com/ProgmaticProgrammer/UnitTestEmbeddedC) | Linux (gcc7) |
 | [![Visual Studio Builds](https://ci.appveyor.com/api/projects/status/t6i95u07gw1gqhql/branch/master?svg=true)](https://ci.appveyor.com/project/ProgmaticProgrammer/unittestembeddedc/branch/master)       | Windows (Visual Studio 2017) |
 
 
